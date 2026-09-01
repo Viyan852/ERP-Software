@@ -82,3 +82,7 @@ Example:
 
 ```text
 class 7 HW.1787729246.pdf
+
+Disclaimer
+
+ERP GlassOS is an independent ERP companion dashboard designed for educational and analytics purposes. Users are responsible for complying with their institution's policies and permissions.
