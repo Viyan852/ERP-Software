@@ -1,12 +1,8 @@
-/* App Layout - ERP GlassOS */
-import "./styles/globals.css";
-import { Inter } from "next/font";
-
-const inter = Inter({ subsets: ["latin"] });
+import "../styles/globals.css";
 
 export const metadata = {
-  title: "ERP GlassOS - Next-Generation ERP Analytics",
-  description: "Premium ERP analytics platform with Apple Liquid Glass aesthetic",
+  title: "ERP GlassOS",
+  description: "ERP Dashboard",
 };
 
 export default function RootLayout({
@@ -15,10 +11,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="min-h-screen">
-      <body className={inter.className}>
-        {children}
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }

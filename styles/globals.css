@@ -1,147 +1,35 @@
-/* Global styles for ERP GlassOS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* CSS Variables for Glassmorphism */
-:root {
-  --bg-light: #F8FAFC;
-  --bg-dark: #080808;
-  --card-light: rgba(255, 255, 255, 0.15);
-  --card-dark: rgba(16, 16, 16, 0.3);
-  --border-light: rgba(255, 255, 255, 0.2);
-  --border-dark: rgba(255, 255, 255, 0.1);
-  --accent-blue: #06B6D4;
-  --accent-purple: #A78BFA;
-  --accent-cyan: #5FC8AA;
-  --muted: #64748B;
-}
-
-html {
-  background: var(--bg-light);
-  color: var(--text-light);
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    background: var(--bg-dark);
-    color: var(--text-dark);
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.dark {
-  --bg: #080808;
-  --bg-card: #101010;
-  --text: #F1F5F9;
-  --muted: #64748B;
-  --border: rgba(255, 255, 255, 0.1);
-}
-
-.glass-card {
-  background: var(--card-dark);
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
-  border: 1px solid var(--border-dark);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.glass-card-light {
-  background: var(--card-light);
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
-}
-
-.glow-blue {
-  box-shadow: 0 0 20px rgba(6, 182, 212, 0.15);
-}
-
-.glow-purple {
-  box-shadow: 0 0 20px rgba(167, 139, 250, 0.15);
-}
-
-.glow-cyan {
-  box-shadow: 0 0 20px rgba(95, 200, 170, 0.15);
-}
-
-.btn-apple {
-  background: var(--accent-blue);
+  background: #080808;
   color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: all 0.2s ease;
-  border: none;
-  cursor: pointer;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.btn-apple:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(6, 182, 212, 0.4);
+.container {
+  padding: 30px;
 }
 
-.btn-apple:active {
-  transform: translateY(0);
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
-/* Scrollbar styles */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-/* Animations */
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-.animate-fade-in-up {
-  animation: fade-in-up 0.5s ease-out forwards;
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-  }
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  padding: 20px;
 }
